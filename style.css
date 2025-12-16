@@ -1,8 +1,16 @@
 header{
  nav{
-    .ul{
         display: flex;
+        justify-content: space-between;
+        font-size: 20px;
         
-    }
+        margin: auto;
+        width: 1130px;
+        a,
+        ul {
+            text-decoration: none;
+            color: black;
+            display: flex;
+        }
  }
 }
