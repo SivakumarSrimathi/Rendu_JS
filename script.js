@@ -1,7 +1,7 @@
-const header = document.getElementById("herosec");
-const secOne = document.getElementById("sec1");
-const secTwo = document.getElementById("sec2");
-const secThree = document.getElementById("sec3");
+const hero = document.getElementById("herosec");
+const avantages = document.getElementById("avantages");
+const activites = document.getElementById("activites");
+const temoignages = document.getElementById("temoignages");
 const secFour = document.getElementById("sec4");
 
  const API_URL = `https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/json/escape-game.json`;
@@ -17,35 +17,36 @@ const secFour = document.getElementById("sec4");
 
             const h1 = document.createElement("h1");
             h1.textContent = data.nomCommercial;
-            header.appendChild(h1);
+            hero.appendChild(h1);
 
             const para = document.createElement("p");
             para.textContent = data.phraseAccroche;
-            header.appendChild(para);
+            hero.appendChild(para);
 
             const texteAppelAction = document.createElement("a");
             texteAppelAction.href = "";
             texteAppelAction.textContent = data.texteAppelAction;
-            header.appendChild(texteAppelAction);
+            hero.appendChild(texteAppelAction);
 
 
 
             
             const h2 = document.createElement("h2");
             h2.textContent = "Avantages Clients";
-            secOne.appendChild(h2);
+            avantages.appendChild(h2);
 
             data.avantagesClients.forEach(element => {
+                
                 let listAvantage = document.createElement("div");
                 listAvantage.textContent = element;
-                secOne.appendChild(listAvantage);// pas de html 
-                // secOne.appendChild(data.avantagesClients);
+                avantages.appendChild(listAvantage);// pas de html 
+                
 
             });
             
-            const titreH2 =document.createElement("h2");
-            titreH2.textContent = "Activites";
-            secTwo.appendChild(titreH2);
+            const titreActivite = document.createElement("h2");
+            titreActivite.textContent = "Activites";
+            activites.appendChild(titreActivite);
 
             data.activites.forEach(element => {
                 // let activitesName = document.createElement("div");
@@ -66,8 +67,38 @@ const secFour = document.getElementById("sec4");
 
                 activityCard.appendChild(activitesDesc);
 
-                secTwo.appendChild(activityCard);
- 
+                activites.appendChild(activityCard);
+            });
+
+            const titreTemo = document.createElement("h2");
+            titreTemo.textContent = "Temoignages";
+            temoignages.appendChild(titreTemo);
+
+            data.temoignages.forEach(element => {
+
+                let temoCard = document.createElement("div");
+                
+                let temoName = document.createElement("p");
+                temoName.textContent = element.prenom;
+                
+                temoCard.appendChild(temoName);
+
+                let temoType = document.createElement("p");
+                temoType.textContent = element.typeExperience;
+
+                temoCard.appendChild(temoType);
+
+                let temoCommentaire = document.createElement("p");
+                temoCommentaire.textContent = element.commentaire;
+
+                temoCard.appendChild(temoCommentaire);
+
+                let temoNote = document.createElement("p");
+                temoNote.textContent = element.note;
+
+                temoCard.appendChild(temoNote);
+
+                temoignages.appendChild(temoCard);
             });
 
         })
