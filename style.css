@@ -1,16 +1,95 @@
+body{
+    margin: 0px;
+}
 header{
  nav{
         display: flex;
         justify-content: space-between;
-        font-size: 20px;
+        align-items: center;
+        
         
         margin: auto;
         width: 1130px;
         a,
-        ul {
+        ul{
             text-decoration: none;
             color: black;
             display: flex;
+            gap: 10px;
+        }
+        .btnapple{
+            margin: 20px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 18px;
+            padding-right: 18px;
+            color: white;
+            background-color: black;   
         }
  }
+ 
+ #herosec{
+    margin: auto;
+    width: 1170px;
+    text-align: center;
+    padding: 50px;
+    padding-top: 200px;
+    padding-bottom: 250px;
+    font-size: 30px;
+    color: black;
+    h1,
+    p{
+        background-color: white;
+        margin: 30px;
+    }
+    a{
+        padding-top: 15px;
+            text-decoration: none;
+            padding: 10px;
+            color: red;
+            background-color: white;
+    }
+    background-image: url(https://images.pexels.com/photos/6498780/pexels-photo-6498780.jpeg);
+    background-size: cover;
+ }
 }
+#avantages{
+    margin: auto;
+    width: 1130px;
+    text-align: center;
+    padding: 50px;
+    padding-top: 150px;
+    font-size: 30px;
+    div{
+        display: flex;
+    }
+ }
+ #activites{
+     margin: auto;
+    width: 1130px;
+    text-align: center;
+    padding: 50px;
+    padding-bottom: 200px;
+    font-size: 30px;
+    padding-top: 150px;
+    div{
+    
+        div{
+        
+            img{
+            width: 303px;
+        }
+        }
+        
+        
+    }
+ }
+ #temoignages{
+     margin: auto;
+    width: 1130px;
+    text-align: center;
+    padding: 50px;
+    padding-top: 150px;
+    font-size: 30px;
+   
+ }

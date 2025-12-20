@@ -36,12 +36,14 @@ const secFour = document.getElementById("sec4");
             avantages.appendChild(h2);
 
             data.avantagesClients.forEach(element => {
-                
-                let listAvantage = document.createElement("div");
+                let avantageCard = document.createElement("div");
+                let listAvantage = document.createElement("p");
                 listAvantage.textContent = element;
+                avantageCard.appendChild(listAvantage);
+
                 avantages.appendChild(listAvantage);// pas de html 
                 
-
+                
             });
             
             const titreActivite = document.createElement("h2");
@@ -50,6 +52,7 @@ const secFour = document.getElementById("sec4");
 
             data.activites.forEach(element => {
                 // let activitesName = document.createElement("div");
+                let coverItems = document.createElement("div")
                 let activityCard = document.createElement("div");
 
                 let activitesimg = document.createElement("img")
@@ -67,7 +70,9 @@ const secFour = document.getElementById("sec4");
 
                 activityCard.appendChild(activitesDesc);
 
-                activites.appendChild(activityCard);
+                coverItems.appendChild(activityCard);
+                activites.appendChild(coverItems);
+                
             });
 
             const titreTemo = document.createElement("h2");
